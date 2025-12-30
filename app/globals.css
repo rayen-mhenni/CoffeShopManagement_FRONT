@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #7c3f2a; /* espresso */
+  --brand-2: #2f1b12; /* roast */
+  --accent: #22c55e; /* fresh */
+
+  --surface: #fafafa;
+  --surface-2: rgba(255, 255, 255, 0.82);
+  --muted: #f4f4f5;
+  --border: rgba(0, 0, 0, 0.06);
+  --ring: rgba(124, 63, 42, 0.25);
+}
+
+body {
+  background:
+    radial-gradient(1000px 600px at 20% 0%, rgba(124, 63, 42, 0.10), transparent 60%),
+    radial-gradient(900px 600px at 80% 10%, rgba(34, 197, 94, 0.08), transparent 60%),
+    var(--surface);
+}
+
+::selection {
+  background: rgba(124, 63, 42, 0.18);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+html[dir="rtl"] table th,
+html[dir="rtl"] table td {
+  text-align: right;
+}
